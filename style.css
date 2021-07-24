@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*
+ Theme Name:   Foxy
+ Theme URI:
+ Description:  Elegant, scrolling one-pager
+ Author:       Emma Wishart
+ Author URI:
+ Template:     twentytwentyone
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentyonechild
+*/
+
+/* Colors!
+FoxyOrange: #d46427;
+RedLikeClay: #a94c00;
+DarkBlue: #1e303a;
+SteelBlue: #88a5a9;
+CoolGrey: #efeeee;
+Pesto: #6f9a68;
+*/
+body {
+    background-color:#a94c00;
+}
+
+.site-logo img {
+    max-width: 80%;
+}
+
+.temp-menu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer {
+    background-color: #f2f6fa;
+    min-width: 100%;
+    padding: 0 5%;
+}
+
+.widget-area {
+    display: none;
+    /* margin-top: calc(6 * var(--global--spacing-vertical)); */
+    /*padding-bottom: calc(var(--global--spacing-vertical) / 3);*/
+    color: var(--footer--color-text);
+    font-size: var(--footer--font-size);
+    font-family: var(--footer--font-family);
+    background: #efeeee;
+}
