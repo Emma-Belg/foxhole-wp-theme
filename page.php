@@ -9,6 +9,7 @@
  * @since Twenty Twenty-One 1.0
  */
 
+display_homepage_video();
 get_header();
 
 /* Start the Loop */
