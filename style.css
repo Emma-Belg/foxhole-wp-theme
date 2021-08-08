@@ -86,6 +86,28 @@ iframe {
 }
 .vid-info h1 { font-size: 3rem; font-weight: 700; margin-top: 0; line-height: 1.2; letter-spacing: 0.1em; }
 .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+
+.ytp-iv-video-content {
+    min-width: 100% !important;
+    top: 55px;
+}
+
+.ytp-iv-video-content .style {
+    min-width: 100% !important;
+    /*left: 473.278px;*/
+    /*top: 0px;*/
+}
+
+.ytp-chrome-top, .ytp-chrome-bottom {
+    display: none;
+    background-color: red !important;
+}
+
+.html5-video-player:not(.ytp-transparent), .html5-video-player.unstarted-mode, .html5-video-player.ad-showing, .html5-video-player.ended-mode, .html5-video-player.ytp-fullscreen {
+    background-color: #aaa !important;
+    width: 100%;
+}
+
 /*@media (min-aspect-ratio: 16/9) {*/
 /*    .video-foreground { height: 300%; top: -100%; }*/
 /*}*/
@@ -99,3 +121,8 @@ iframe {
 /*@media all and (max-width: 500px) {*/
 /*    .vid-info .acronym { display: none; }*/
 /*}*/
+
+/* ----------------  FOOTER -------------- */
+.no-widgets .site-footer {
+    margin-top: 0;
+}

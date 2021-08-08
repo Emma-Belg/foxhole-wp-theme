@@ -25,6 +25,12 @@
 
 <!--intro section-->
 
+<div class="intro-section">
+    <?php
+    get_the_title("About intro");
+    ?>
+</div>
+
 <!--about us section-->
 
 <!--Our work section-->
