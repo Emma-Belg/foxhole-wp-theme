@@ -6,31 +6,39 @@
  *
  * @package WordPress
  */
+
+display_homepage_video();
+get_header();
+
 ?>
-<!--Fullscreen video-->
-<div class="video-background">
-    <div class="video-foreground">
-        <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+    <!--intro section-->
+
+    <div class="between-paper">
+        <img alt="Fox Hole Films Logo" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/Torn-Paper-Edge-02.png">
     </div>
-</div>
-
-<div id="vidtop-content">
-    <div class="vid-info">
-        <h1>FOX HOLE FILMS</h1>
-        <h3>Always <i>your</i> story, always <i>outstanding</i></h3>
-            <a href="#">Our Work</a>
-        <p>INSERT ARROW TO SUGGEST TO SCROLL DOWN</p>
+    <!--about us section-->
+    <div class="homepage-section">
+        <div class="intro-about">
+            <?php
+            echo get_the_content(null, false, 22);
+            ?>
+            <br />
+            <button>About Us</button>
+        </div>
     </div>
-</div>
 
-<!--intro section-->
+    <div class="between-paper">
+        <img alt="Fox Hole Films Logo" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/Torn-Paper-Edge-02.png">
+    </div>
 
-<div class="intro-section">
-    <?php
-    get_the_title("About intro");
-    ?>
-</div>
+    <!--Our work section-->
+    <div class="homepage-section">
+        <div class="intro-our-work">
+            <?php
+            echo get_the_content(null, false, 24);
+            ?>
+        </div>
+    </div>
+<?php
 
-<!--about us section-->
-
-<!--Our work section-->
+get_footer();
