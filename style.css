@@ -22,8 +22,14 @@ SteelBlue: #88a5a9;
 CoolGrey: #efeeee;
 Pesto: #6f9a68;
 */
+html {
+    overflow-x: hidden;
+}
+
 body {
-    background-color:#a94c00;
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color:#1e303a;
 }
 
 .page-id-33 .entry-title {
@@ -34,6 +40,15 @@ body {
     border-bottom: none;
     /* padding-bottom: calc(2 * var(--global--spacing-vertical)); */
     margin-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-float-button {
+    min-width: 50px;
 }
 
 button {
@@ -61,6 +76,31 @@ button {
     background: #efeeee;
 }
 
+/* ----------------  HEADER  ---------------------  */
+
+header {
+    color:white;
+}
+.site-title, .site-description, #primary-menu-list {
+    color:white;
+}
+
+.primary-menu-container a {
+    color:white;
+}
+
+.site-header {
+    color:white;
+}
+#masthead {
+    color: white;
+}
+#site-navigation.primary-navigation {
+    color: white;
+}
+nav {
+    color:white;
+}
 
 /* ----------------  HOME PAGE ---------------------  */
 
@@ -139,13 +179,16 @@ iframe {
 }
 
 .intro-about {
-    padding: 80px 20%;
-    min-height: 200px;
+    padding: 120px 20%;
+    margin-top: 50px;
+    margin-bottom: -170px;
+    min-height: 600px;
     background-color: white;
 }
 
 .intro-our-work {
-    padding: 60px 20% 250px 20%;
+    padding: 80px 20% 350px 20%;
+    margin-top: 90px;
     margin-bottom: -330px;
     background-color: #1e303a;
     color: white;
@@ -155,13 +198,69 @@ iframe {
     margin: -30px -80px -120px -30px;
 }
 
+@media (max-width: 992px) {
+    .second-divide{
+        margin: -30px -0px -110px -0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .between-paper .first-divide{
+        margin: -30px -80px -100px -30px;
+    }
+    .second-divide{
+        margin: -30px -0px -100px -0px;
+    }
+
+    .intro-about {
+        margin-top: 80px;
+    }
+
+    .intro-our-work {
+        margin-top: 90px;
+    }
+
+    .homepage-section {
+        margin-bottom: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .first-divide{
+        margin: -30px -80px -110px -30px;
+    }
+    .second-divide{
+        margin: -30px -0px -130px -0px;
+    }
+
+    .intro-about {
+        margin-top: 80px;
+    }
+
+    .intro-our-work {
+        margin-top: 200px;
+    }
+
+    .homepage-section {
+        margin-bottom: 140px;
+    }
+
+    footer {
+        margin-bottom: 120px;
+    }
+}
+
 /* ----------------  FOOTER -------------- */
+footer {
+    margin-bottom: 0px;
+}
+
 .no-widgets .site-footer {
     margin-top: 0;
 }
 
 .site-footer {
-    background-color: #f2f6fa;
+    background-color: #efeeee;
     min-width: 100%;
     padding: 0 5%;
 }

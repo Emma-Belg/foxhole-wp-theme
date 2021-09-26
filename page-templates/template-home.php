@@ -13,9 +13,11 @@ get_header();
 ?>
     <!--intro section-->
 
-    <div class="between-paper">
-        <img alt="Fox Hole Films Logo" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/Torn-Paper-Edge-02.png">
+
+    <div class="between-paper first-divide">
+        <img width=100% alt="ripped paper" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-03-overdark.png">
     </div>
+
     <!--about us section-->
     <div class="homepage-section">
         <div class="intro-about">
@@ -23,12 +25,16 @@ get_header();
             echo get_the_content(null, false, 22);
             ?>
             <br />
-            <button>About Us</button>
+            <div class="flex-container">
+                <div class="right-float-button">
+                    <a href="/about"><button>About Us</button></a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="between-paper">
-        <img alt="Fox Hole Films Logo" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/Torn-Paper-Edge-02.png">
+    <div class="between-paper second-divide">
+        <img width=100% alt="ripped paper" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-11-underdark.png">
     </div>
 
     <!--Our work section-->
