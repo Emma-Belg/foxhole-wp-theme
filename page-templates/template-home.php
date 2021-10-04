@@ -25,7 +25,7 @@ get_header();
             <br/>
             <div class="flex-container">
                 <div class="right-float-button">
-                    <a href="/work">
+                    <a href="/about">
                         <button>About Us</button>
                     </a>
                 </div>
@@ -94,7 +94,7 @@ get_header();
             <div class="block">
                 <div class="flex-container">
                     <div class="right-float-button">
-                        <a href="/about">
+                        <a href="/work">
                             <button>See Work</button>
                         </a>
                     </div>
@@ -107,20 +107,18 @@ get_header();
         <div class="flex-container">
             <div class="flex-row">
                 <div class="work-box">
-                    <?php
-                    echo get_the_content(null, false, 24);
-                    ?>
-                </div>
-                <div class="work-box">
                     <div class="work-img">
                         <img width="100%" alt="featured-work1"
                              src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
+                        <div class="featured-content">
+                            <h3>Title</h3>
+                            <p>A short description of the work goes here.</p>
+                            <a href="#">see more</a>
+                        </div>
                     </div>
-                    <div class="featured-content">
-                        <h3>Title</h3>
-                        <p>A short description of the work goes here.</p>
-                        <a href="#">see more</a>
-                    </div>
+                    <?php
+                    echo get_the_content(null, false, 24);
+                    ?>
                 </div>
             </div>
         </div>
@@ -128,11 +126,6 @@ get_header();
             <img width="100%" alt="featured-work1"
                  src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-16-double.png">
         </div>
-    </div>
-
-    <div class="between-paper second-divide">
-        <img width=100% alt="ripped paper"
-             src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-11-underdark.png">
     </div>
 
     <!--about us section--> <!--intro section-->
@@ -148,8 +141,8 @@ get_header();
                 </div>
 
                 <div class="space-between-row">
-                    <div class="us-mobile">
-                        <div class="start-img">
+                    <div class="us-mobile half">
+                        <div class="mobile-img">
                             <img width="100%" alt="featured-work1"
                                  src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
                         </div>
@@ -158,8 +151,8 @@ get_header();
                             <a href="#">see more</a>
                         </div>
                     </div>
-                    <div class="us-mobile">
-                        <div class="end-img">
+                    <div class="us-mobile half">
+                        <div class="mobile-img">
                             <img width="100%" alt="featured-work1"
                                  src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
                         </div>
@@ -204,12 +197,17 @@ get_header();
         </div>
     </div>
 
+    <div class="between-paper second-divide">
+        <img width=100% alt="ripped paper"
+             src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-11-underdark.png">
+    </div>
+
     <!--Brands we've worked with section-->
     <div class="testimonial-section">
         <div class="intro-our-work">
-            <?php
-            echo get_the_content(null, false, 24);
-            ?>
+            <h3>Brands we've worked with</h3>
+            <p>Maybe some testimonials that flash through here</p>
+            <p>Then some of the brands' logos</p>
         </div>
     </div>
 <?php
