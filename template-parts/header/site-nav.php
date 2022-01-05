@@ -32,5 +32,12 @@
             )
         );
         ?>
+        <div id="scrollShow">
+            <a href="https://www.foxholefilms.com.au" style="margin-top: -42px;
+    margin-left: 38%;">
+                <img alt="Fox Hole Films Logo" width=38%
+                     src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/logos/FoxHoleFilmLogoWhiteText.png">
+            </a>
+        </div>
     </nav><!-- #site-navigation -->
 <?php endif; ?>

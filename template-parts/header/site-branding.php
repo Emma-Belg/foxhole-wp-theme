@@ -19,7 +19,12 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 <?php endif; ?>
 
 <div class="site-branding">
-    <div class="site-logo"><img alt="Fox Hole Films Logo" src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/logos/FoxHoleFilmLogoWhiteText.png"></div>
+    <div id="homeLogo" class="site-logo">
+        <a href="https://www.foxholefilms.com.au">
+            <img alt="Fox Hole Films Logo"
+                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/logos/FoxHoleFilmLogoWhiteText.png">
+        </a>
+    </div>
     <?php if ( has_custom_logo() && ! $show_title ) : ?>
         <div class="site-logo"><?php the_custom_logo(); ?></div>
     <?php endif; ?>

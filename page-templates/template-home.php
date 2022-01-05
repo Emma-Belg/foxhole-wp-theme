@@ -9,6 +9,7 @@
 
 display_homepage_video();
 get_header();
+navbarScrollChange();
 
 ?>
     <!--intro section-->
@@ -47,7 +48,7 @@ get_header();
                     <br/><br/>
                 </div>
             </div>
-            <div class="flex-row">
+            <div class="flex-row flex-justify-center">
                 <div class="featured-box">
                     <div class="featured-img">
                         <img width="300px" alt="featured-work1"
@@ -71,7 +72,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="flex-row">
+            <div class="flex-row flex-justify-center">
                 <div class="featured-box">
                     <div class="featured-img">
                         <img width="300px" alt="featured-work1"
@@ -109,11 +110,13 @@ get_header();
     <!--our work section-->
     <div class="work-section">
         <div class="flex-container">
-            <div class="flex-row">
-                <h3><?php
+            <div class="vertical-space-20"></div>
+            <div class="vertical-space-20"></div>
+            <div class="flex-row flex-justify-center">
+                <h2><?php
                     echo get_the_title(24);
                     ?>
-                </h3><br/><div class="work-box">
+                </h2><br/><div class="work-box">
 
                     <div class="float-right">
                         <?php
@@ -128,57 +131,51 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="work-section">
-            <div class="work-box">
-                <h3><?php echo get_the_title(24); ?></h3>
 
-            </div>
-        </div>
-
-        <div class="block full-width">
-            <div class="horizontal-gallery">
-                <div class="flex">
-                    <div class="category-img">
-                        <a href="#">
-                            <img width="300px" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                            <div class="category-title">
-                                <h3>Property</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="category-img">
-                        <a href="#">
-                            <img width="300px" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                            <div class="category-title">
-                                <h3>Corporate</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="category-img">
-                        <a href="#">
-                            <img width="300px" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                            <div class="category-title">
-                                <h3>Commercial</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="category-img">
-                        <a href="#">
-                            <img width="300px" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                            <div class="category-title">
-                                <h3>Film & Documentary</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <img width="100%" alt="featured-work1"
-                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-16-double.png">
-        </div>
+        <!--<div class="block full-width">-->
+        <!--    <div class="horizontal-gallery">-->
+        <!--        <div class="flex">-->
+        <!--            <div class="category-img">-->
+        <!--                <a href="#">-->
+        <!--                    <img width="300px" alt="featured-work1"-->
+        <!--                         src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">-->
+        <!--                    <div class="category-title">-->
+        <!--                        <h3>Property</h3>-->
+        <!--                    </div>-->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--            <div class="category-img">-->
+        <!--                <a href="#">-->
+        <!--                    <img width="300px" alt="featured-work1"-->
+        <!--                         src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">-->
+        <!--                    <div class="category-title">-->
+        <!--                        <h3>Corporate</h3>-->
+        <!--                    </div>-->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--            <div class="category-img">-->
+        <!--                <a href="#">-->
+        <!--                    <img width="300px" alt="featured-work1"-->
+        <!--                         src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">-->
+        <!--                    <div class="category-title">-->
+        <!--                        <h3>Commercial</h3>-->
+        <!--                    </div>-->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--            <div class="category-img">-->
+        <!--                <a href="#">-->
+        <!--                    <img width="300px" alt="featured-work1"-->
+        <!--                         src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">-->
+        <!--                    <div class="category-title">-->
+        <!--                        <h3>Film & Documentary</h3>-->
+        <!--                    </div>-->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <img width="100%" alt="featured-work1"-->
+        <!--         src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/textures/Torn-Paper-Edge-16-double.png">-->
+        <!--</div>-->
     </div>
 
     <!--about us section--> <!--intro section-->
@@ -197,21 +194,7 @@ get_header();
                     <div class="us-mobile half">
                         <div class="mobile-img">
                             <img width="100%" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                        </div>
-                        <div class="featured-content">
-                            <p>A short description of the work goes here.</p>
-                            <a href="#">see more</a>
-                        </div>
-                    </div>
-                    <div class="us-mobile half">
-                        <div class="mobile-img">
-                            <img width="100%" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                        </div>
-                        <div class="featured-content">
-                            <p>A short description of the work goes here.</p>
-                            <a href="#">see more</a>
+                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/about-us/james+jackson-square.jpg">
                         </div>
                     </div>
                 </div>
@@ -219,31 +202,17 @@ get_header();
         </div>
         <div class="large-display">
             <div class="flex-container">
-                <div class="space-between-row">
+                <div class="flex-row flex-align-center flex-justify-center">
                     <div class="us-box">
                         <div class="start-img">
                             <img width="100%" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                        </div>
-                        <div class="featured-content">
-                            <p>A short description of the work goes here.</p>
-                            <a href="#">see more</a>
+                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/about-us/james+jackson-square.jpg">
                         </div>
                     </div>
                     <div class="us-box">
                         <?php
                         echo get_the_content(null, false, 22);
                         ?>
-                    </div>
-                    <div class="us-box">
-                        <div class="end-img">
-                            <img width="100%" alt="featured-work1"
-                                 src="https://staging.foxholefilms.com.au/wp-content/themes/foxy/assets/images/work/FoxHoleFilmsProperty1.png">
-                        </div>
-                        <div class="featured-content">
-                            <p>A short description of the work goes here.</p>
-                            <a href="#">see more</a>
-                        </div>
                     </div>
                 </div>
             </div>

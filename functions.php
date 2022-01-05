@@ -15,10 +15,10 @@
 //    wp_enqueue_style( 'twentytwenty-style', get_template_directory_uri() . '/style.css' );
 //});
 
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
-    wp_enqueue_style('child-style', get_stylesheet_uri(),
-        array('twenty-twenty-one-style'),
+    wp_enqueue_style( 'child-style', get_stylesheet_uri(),
+        array( 'twenty-twenty-one-style' ),
         wp_get_theme()->get('Version') // this only works if you have Version in the style header
     );
 }
@@ -27,35 +27,67 @@ function display_homepage_video() {
     ?>
     <div class="video-background">
         <div class="video-foreground">
-            <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&rel=0&autoplay=1&mute=1&loop=1&playlist=W0LHTWG-UmQ"
-                    frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/_J4D2Yry0s0?controls=0&rel=0&modestbranding=1&start=2&autoplay=1&mute=1&loop=1"
+                    frameborder="0" allowfullscreen
+                    allow="autoplay"
+            ></iframe>
         </div>
     </div>
-
-    <div id="vidtop-content">
-        <div class="vid-info">
-            <h1>FOX HOLE FILMS</h1>
-            <h3>Always <i>your</i> story, always <i>outstanding</i></h3>
-            <a href="#">Our Work</a>
-            <p>INSERT ARROW TO SUGGEST TO SCROLL DOWN</p>
-        </div>
-    </div>
+    <!--    autoplay=1&mute=1&enablejsapi=1-->
+    <!--    &modestbranding=1&start=2-->
+    <!--    rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" -->
+    <!--https://www.youtube.com/watch?v=_J4D2Yry0s0-->
+    <!--<div id="vidtop-content">-->
+    <!--    <div class="vid-info">-->
+    <!--        <h1>FOX HOLE FILMS</h1>-->
+    <!--        <h3>Always <i>your</i> story, always <i>outstanding</i></h3>-->
+    <!--        <a href="#">Our Work</a>-->
+    <!--        <p>INSERT ARROW TO SUGGEST TO SCROLL DOWN</p>-->
+    <!--    </div>-->
+    <!--</div>-->
     <br/>
     <?php
 }
 
-function echoString($string) {
+function echoString($string){
     echo $string;
 }
 
-function getSpecificValueOfChildrenFromParentCategory($parentCategoryID, $value): array {
-    $args = array(
+function navbarScrollChange () {
+    ?>
+    <script>
+        window.onscroll = function() {makeSticky()};
+
+        let navbar = document.getElementById("site-navigation");
+        let sticky = navbar.offsetTop;
+        let logoClass = document.getElementById("homeLogo");
+        //let logo = logoClass.getElementsByTagName('img');
+
+        function makeSticky() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+                // logoClass.style.maxWidth("35%");
+                // logoClass.style.marginTop("-60px");
+                logoClass.classList.add("stickyLogo");
+            } else {
+                navbar.classList.remove("sticky");
+                logoClass.classList.remove("stickyLogo");
+                // logoClass.style.maxWidth("80%");
+                // logoClass.style.marginTop("0");
+            }
+        }
+    </script>
+    <?php
+}
+
+function getSpecificValueOfChildrenFromParentCategory($parentCategoryID, $value) : array{
+    $args=array(
         'orderby' => 'name',
         'order' => 'ASC',
         'parent' => $parentCategoryID,
-        'hide_empty' => false,
+        'hide_empty'=> false,
     );
-    $categories = get_categories($args);
+    $categories=get_categories($args);
     $categoryValue = [];
     foreach ($categories as $category) {
         array_push($categoryValue, $category->$value);
@@ -63,7 +95,7 @@ function getSpecificValueOfChildrenFromParentCategory($parentCategoryID, $value)
     return $categoryValue;
 }
 
-function getPostFromCategory($categoryID): array {
+function getPostFromCategory ($categoryID) : array{
     $args = array(
         'post_type' => 'post',
         'post_status' => 'publish',
@@ -74,8 +106,7 @@ function getPostFromCategory($categoryID): array {
     return $posts;
 }
 
-function getChildrenPostsFromCategory($arrayFromFunction): array
-{
+function getChildrenPostsFromCategory ($arrayFromFunction) : array {
     $arrayOfChildrenPosts = [];
     foreach ($arrayFromFunction as $childPost) {
         array_push($arrayOfChildrenPosts, getPostFromCategory($childPost));
@@ -88,36 +119,36 @@ function fadingCarouselCategories($inputCategoryID, $parentID = null)
     $categories = get_categories($inputCategoryID);
     $parentName = get_category($parentID);
     ?>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    <div class="slideshow-container">
-    <?php
-    foreach ($categories as $category) {
-        if ($category->name !== "Uncategorized" && $category->name !== $parentName->name) {
-            $args = array(
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'category_name' => $category->name,
-                'posts_per_page' => 1,
-            );
-            $arr_posts = new WP_Query($args);
-            $current_url = home_url($_SERVER['REQUEST_URI']);
-            if ($arr_posts->have_posts()) :
-                $arr_posts->the_post();
-                if (has_post_thumbnail()) :
-                    echoString('
+    <div class="slideshow-container flex-row flex-align-start flex-justify-center">
+        <?php
+        foreach ($categories as $category) {
+            if ($category->name !== "Uncategorized" && $category->name !== $parentName->name) {
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => $category->name,
+                    'posts_per_page' => 1,
+                );
+                $arr_posts = new WP_Query($args);
+                $current_url = home_url($_SERVER['REQUEST_URI']);
+                if ($arr_posts->have_posts()) :
+                    $arr_posts->the_post();
+                    if (has_post_thumbnail()) :
+                        echoString('
                    <div class="mySlides">
                       <img width="100%" height="auto" alt="' . $category->slug . '" 
                           src="' . get_the_post_thumbnail_url() . '">
-                      <a href="' . $current_url . '/' . $category->slug . '">
+                          <a href="' . $current_url . '/' . $category->slug . '">
                          <div class="text">' . $category->slug . '</div>
                       </a>
                    </div>');
+                    endif;
                 endif;
-            endif;
+            }
         }
-    }
-    ?>
+        ?>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <script>
         let slideIndex = 1;

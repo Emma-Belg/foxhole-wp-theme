@@ -32,16 +32,53 @@ body {
     overflow-x: hidden;
     max-width: 100%;
     background-color:#1e303a;
+    color: #ffffff;
 }
 
-.page-id-33 .entry-title {
+h1 h2 h3 h4 h5 h6 {
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.entry-title {
+    color: #ffffff;
+}
+.singular .entry-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    /* padding-bottom: calc(2 * var(--global--spacing-vertical)); */
+    /*margin-bottom: calc(3 * var(--global--spacing-vertical));*/
+}
+
+.vertical-space-20 {
+    height: 20px;
+    width: 100%;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1e303a;
+}
+
+.stickyLogo {
+    width: 35%;
+    margin: auto;
+    margin-top: 38px;
+}
+
+.displayInline{
+    display: inline;
+}
+
+.displayNone {
     display: none;
 }
 
-.singular .entry-header {
-    border-bottom: none;
-    /* padding-bottom: calc(2 * var(--global--spacing-vertical)); */
-    margin-bottom: calc(3 * var(--global--spacing-vertical));
+
+.page-id-33 .entry-title {
+    display: none;
 }
 
 .flex-container {
@@ -55,13 +92,20 @@ body {
     display: flex;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+.flex-align-center {
+    align-items: center;
+}
+.flex-align-start {
+    align-items: flex-start;
+}
 .flex-row {
     display: flex;
     width: 90%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
     column-gap: 5vw;
 }
 
@@ -125,12 +169,46 @@ button {
     color: white;
 }
 
+#primary-menu-list {
+    left: 4vw;
+}
 .site-title, .site-description, #primary-menu-list {
     color:white;
 }
 
 .site-header {
     justify-content: center;
+}
+.primary-navigation-open .primary-navigation > .primary-menu-container {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    background-color:#1e303a;
+    color: #ffffff;
+}
+
+.primary-navigation-open .menu-button-container {
+    background-color: #1e303a;
+}
+
+.admin-bar .primary-navigation {
+    /*position: fixed;*/
+    background: #1e303a;
+    width: 100%;
+    top: 25px;
+}
+
+.primary-menu-container {
+    left: 20px;
+}
+
+/*.site-branding:last-child {*/
+/*    z-index: 100;*/
+/*}*/
+
+.menu-button-container #primary-mobile-menu {
+    color: #ffffff;
 }
 
 /* ----------------  HOME PAGE ---------------------  */
@@ -208,7 +286,7 @@ iframe {
 }
 
 .intro-about {
-    padding: 120px 20%;
+    padding: 60px 20%;
     margin-top: 50px;
     margin-bottom: -170px;
     min-height: 600px;
@@ -364,7 +442,7 @@ iframe {
     position: absolute;
     bottom: 8px;
     width: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgb(0,0,0,0.5);
     text-align: center;
 }
 
@@ -453,7 +531,7 @@ img[class*="wp-post-image"] {
 }
 
 .us-box {
-    width: 30%;
+    width: 38%;
     padding: 0;
     margin: 0;
 }
